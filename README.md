@@ -2,7 +2,7 @@
 
 **MSIanalyzer** is a flexible pipeline for high-resolution analysis and visualization of Microsatellite Instability (MSI) and tandem repeat regions from sequencing reads.
 
----
+
 
 ## Key Features
 
@@ -13,7 +13,7 @@
 - **Optimized for Nanopore Data** – Designed to tolerate higher error rates and fully leverage ONT long-read sequencing.
 - **Cluster-Aware Statistical Analysis** – Incorporates read clustering to enhance detection of sample-level differences.
 
----
+
 
 ## Installation
 
@@ -22,11 +22,14 @@ pip install git+https://github.com/NagelLabHub/MSIanalyzer.git
 ```
 
 ## Quick Usage Example
-From the repo root:
+A ready-to-run Google Colab notebook is available [here](https://colab.research.google.com/drive/13PjP7rVajoGOFAizytyXdfj6Souv2cts?usp=sharing) to demonstrate an example run of `MSIanalyzer` using the built-in example data.
+
+To run `MSIanalyzer` via the command line, use the following examples from the repository root:
 
 ```bash
-# Run analysis on a single marker
+# Run analysis on a single marker (with sample comparison)
 msianalyzer run-marker BAT25 example_marker.json
+msianalyzer run-marker BAT25 example_marker.json --run-tests
 
 # Run batch analysis on all markers in the JSON
 msianalyzer run-batch example_marker.json
