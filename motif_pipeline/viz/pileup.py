@@ -192,9 +192,14 @@ def pileup_run_pipeline(
     overwrite : bool = False,
 ):
     """Map FASTQs → sorted & indexed BAM (minimap2 + samtools)."""
-    fastqs = sorted(pathlib.Path(fastq_dir).glob("*.fastq*"))
+    fastq_input = pathlib.Path(fastq_input)
+    if fastq_input.is_file():  # single file
+       fastqs = [fastq_input]
+    else: 
+       fastqs = sorted(fastq_input.glob("*.fastq*"))
+
     if not fastqs:
-        raise FileNotFoundError("no FASTQ files found")
+        raise FileNotFoundError(f"No FASTQ files found in {fastq_input!s})
 
     out_dir = pathlib.Path(out_dir)
     if out_dir.exists() and overwrite:
