@@ -199,7 +199,7 @@ def pileup_run_pipeline(
        fastqs = sorted(fastq_input.glob("*.fastq*"))
 
     if not fastqs:
-        raise FileNotFoundError(f"No FASTQ files found in {fastq_input!s})
+        raise FileNotFoundError(f"No FASTQ files found in {fastq_input!s}")
 
     out_dir = pathlib.Path(out_dir)
     if out_dir.exists() and overwrite:
