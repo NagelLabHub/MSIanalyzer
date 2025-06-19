@@ -30,13 +30,14 @@ dependencies = [
   "scikit-learn>=1.5",
   "matplotlib>=3.9",
   "typer>=0.9",
+  "seaborn>=0.13", 
+  "adjustText>=1.0", 
+  "pysam>=0.22",
   "pyarrow>=14",
-  "adjustText",
   "python-Levenshtein>=0.25",     # falls back gracefully if missing
 ]
 
 [project.optional-dependencies]
-plot = ["seaborn>=0.13", "adjustText>=1.0", "pysam>=0.22"] 
 dev  = ["pytest", "ruff", "black", "mypy", "build", "twine"]
 
 [project.scripts]
