@@ -184,7 +184,7 @@ def plot_indel_profile(
 # Mapping helper (unchanged from previous version)
 # ──────────────────────────────────────────────────────────────────────────────
 def pileup_run_pipeline(
-    fastq_dir : str | pathlib.Path,
+    fastq_input : str | pathlib.Path,
     ref_fasta : str | pathlib.Path,
     out_dir   : str | pathlib.Path = "pileup_tmp",
     *,
