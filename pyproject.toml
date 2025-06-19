@@ -1,0 +1,56 @@
+[build-system]
+requires      = ["setuptools>=68", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "msianalyzer"
+dynamic         = ["version"]           
+description     = "Versatile pipeline for microsatellite instability (MSI) analysis and tandem-repeat profiling from sequencing reads."
+readme          = "README.md"
+authors         = [{name="Ting Zhai", email="tingzhai@hsph.harvard.edu"}]
+license         = { text = "MIT" }
+requires-python = ">=3.9"
+
+keywords        = ["bioinformatics", "MSI", "tandem repeat", "nanopore", "next-generation sequencing"]
+classifiers     = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+dependencies = [
+  "biopython>=1.83",
+  "pandas>=2.2",
+  "numpy>=2.0",
+  "scipy>=1.13",
+  "statsmodels>=0.14",
+  "joblib>=1.4",
+  "scikit-bio>=0.6.3",
+  "scikit-learn>=1.5",
+  "matplotlib>=3.9",
+  "typer>=0.9",
+  "pyarrow>=14",
+  "python-Levenshtein>=0.25",     # falls back gracefully if missing
+]
+
+[project.optional-dependencies]
+plot = ["seaborn>=0.13", "adjustText>=1.0", "pysam>=0.22"] 
+dev  = ["pytest", "ruff", "black", "mypy", "build", "twine"]
+
+[project.scripts]
+motif         = "motif_pipeline.pipeline.cli:app"
+motif-pileup  = "motif_pipeline.viz.pileup:pileup_run_pipeline"
+
+[tool.setuptools.packages.find]
+include = ["motif_pipeline*"]
+
+[project.urls]
+Homepage        = "https://github.com/NagelLabHub/msianalyzer"
+Source          = "https://github.com/NagelLabHub/msianalyzer"
+Tracker         = "https://github.com/NagelLabHub/msianalyzer/issues"
+
+[tool.setuptools_scm]
+version_scheme = "release-branch-semver"
+local_scheme   = "no-local-version"
+write_to       = "motif_pipeline/_version.py"

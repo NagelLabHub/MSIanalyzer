@@ -1,0 +1,20 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Build
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+__MACOSX/
+
+# Envs
+.venv/
+env/
+
+# Testing
+.pytest_cache/
+htmlcov/

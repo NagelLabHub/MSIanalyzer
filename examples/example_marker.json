@@ -1,0 +1,32 @@
+{
+  "markers": {
+    "BAT25": {
+        "seq1": "TCGCCTCCAAGAATGTAA",
+        "seq2": "ACTATGGCTCTAAAATGCTCTGT",
+        "motif": "T",
+        "group_map": {
+            "BVSBWG_2": "Sample1",
+            "BVSBWG_5": "Sample2"
+        },
+        "fastq_files": [
+        "examples/fastq_example/BVSBWG_2.fastq",
+        "examples/fastq_example/BVSBWG_5.fastq"
+      ]
+    },
+    "BAT26": {
+        "seq1": "TGACTACTTTTGACTTCAGCC",
+        "seq2": "AACCATTCAACATTTTTAACC",
+        "motif": "A",
+        "group_map": {
+            "9BQL96_2": "Sample1",
+            "9BQL96_5": "Sample2"
+        },
+         "fastq_files": [
+        "examples/fastq_example/9BQL96_2.fastq",
+        "examples/fastq_example/9BQL96_5.fastq"
+      ]
+    }
+  },
+  "min_similarity": 0.85,        
+  "anchor_units": 3
+}

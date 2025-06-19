@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "msianalyzer"
+authors:
+  - family-names: Zhai
+    given-names: Ting
+    email: tingzhai@hsph.harvard.edu
+    affiliation: Harvard T.H. Chan School of Public Health
+  - family-names: Laverty
+    given-names: Daniel
+    affiliation: Harvard T.H. Chan School of Public Health
+  - family-names: Nagel
+    given-names: Zachary
+    affiliation: Harvard T.H. Chan School of Public Health
+date-released: 2025-06-20
+version: "1.0.0"
+license: MIT
+url: https://github.com/NagelLabHub/msianalyzer
