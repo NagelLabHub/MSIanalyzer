@@ -41,8 +41,7 @@ dependencies = [
 dev  = ["pytest", "ruff", "black", "mypy", "build", "twine"]
 
 [project.scripts]
-motif         = "motif_pipeline.pipeline.cli:app"
-motif-pileup  = "motif_pipeline.viz.pileup:pileup_run_pipeline"
+msianalyzer  = "motif_pipeline.pipeline.cli:app"
 
 [tool.setuptools.packages.find]
 include = ["motif_pipeline*"]

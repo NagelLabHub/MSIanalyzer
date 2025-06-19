@@ -26,13 +26,13 @@ From the repo root:
 
 ```bash
 # Run analysis on a single marker
-motif run-marker BAT25 example_marker.json
+msianalyzer run-marker BAT25 example_marker.json
 
 # Run batch analysis on all markers in the JSON
-motif run-batch example_marker.json
+msianalyzer run-batch example_marker.json
 
 # Generate pileup visualization for FASTQ file(s)
-motif-pileup pileup fastq_example/BVSBWG_2.fastq hg38/chr4_BAT25.fa
+msianalyzer pileup fastq_example/BVSBWG_2.fastq hg38/chr4_BAT25.fa
 ```
 
 ## Citation
