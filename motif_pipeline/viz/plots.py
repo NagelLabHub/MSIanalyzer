@@ -90,7 +90,7 @@ def plot_motif_density(summary_df, group_mapping, outcome,
         plt.savefig(path, format="svg")
         print(f"✅ Saved plot → {path}")
 
-    plt.show()
+    plt.close()
 
 def plot_proportion_differences(summary_df, group_mapping, outcome, marker="", output_dir=None, cutoff_value=None):
     """
@@ -184,7 +184,7 @@ def plot_proportion_differences(summary_df, group_mapping, outcome, marker="", o
         fig.savefig(path, format="svg")
         print(f"✅ Saved plot: {path}")
 
-    plt.show()
+    plt.close()
 
 
 def plot_variant_signature_summary(summary_df,
@@ -251,7 +251,7 @@ def plot_variant_signature_summary(summary_df,
         plt.savefig(os.path.join(output_dir, f"variant_signature_summary.png"), bbox_inches="tight")
         print("✅ Variant signature summary saved to:", os.path.join(output_dir, f"variant_signature_summary.png"))
 
-    plt.show()
+    plt.close()
 
 def plot_confident_interruptions(df,
                                  group_mapping: dict = None,
@@ -361,4 +361,4 @@ def plot_confident_interruptions(df,
     if output_dir:
         plt.savefig(os.path.join(output_dir, f"repeat_interruptions.png"), bbox_inches="tight")
         print("✅ Confident interruptions saved to:", os.path.join(output_dir, f"repeat_interruptions.png"))
-    plt.show()
+    plt.close()
