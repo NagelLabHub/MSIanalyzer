@@ -1,18 +1,29 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
-title: "msianalyzer"
+title: "MSIanalyzer: Targeted Nanopore Sequencing Enables Single Nucleotide Resolution Analysis of Microsatellite Instability Diversity"
 authors:
   - family-names: Zhai
     given-names: Ting
     email: tingzhai@hsph.harvard.edu
     affiliation: Harvard T.H. Chan School of Public Health
   - family-names: Laverty
-    given-names: Daniel
+    given-names: Daniel J.
     affiliation: Harvard T.H. Chan School of Public Health
   - family-names: Nagel
-    given-names: Zachary
+    given-names: Zachary D.
     affiliation: Harvard T.H. Chan School of Public Health
-date-released: 2025-06-20
+abstract: "We present a targeted sequencing-based pipeline that profiles microsatellite instability (MSI) at single-nucleotide resolution. Targeted amplicons from the five widely studied Bethesda panel microsatellite loci were sequenced using Oxford Nanopore Technology in two microsatellite unstable colorectal cancer cell lines (HCT15, HCT116), two microsatellite stable cancer cell lines (TK6, U2OS), and two peripheral blood mononuclear cell samples from healthy donors. An anchor-extension algorithm was developed to capture repeat motifs while allowing interruptions, using a threshold informed by platform-specific error. Cluster-aware Dirichlet-multinomial and beta-binomial tests were applied for between-sample comparisons while accounting for read-level clustering within samples. The algorithm revealed distinct repeat profiles in HCT15 and HCT116 compared to other cell types and uncovered allelic diversity across samples at different MSI loci. Our approach complements existing short tandem repeat callers by preserving read-level diversity and delivering targeted, quantitative MSI calls with potential applications in mechanistic research and clinical assay development."
+keywords:
+  - microsatellite instability
+  - nanopore sequencing
+  - single nucleotide resolution
+  - MSI
+  - colorectal cancer
+  - bioinformatics
+type: software
+date-released: 2025-06-28
 version: "1.0.0"
 license: MIT
-url: https://github.com/NagelLabHub/msianalyzer
+repository-code: https://github.com/NagelLabHub/msianalyzer
+url: https://www.biorxiv.org/content/10.1101/2025.06.26.661510v1
+doi: 10.1101/2025.06.26.661510

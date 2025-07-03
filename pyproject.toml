@@ -50,6 +50,7 @@ include = ["motif_pipeline*"]
 Homepage        = "https://github.com/NagelLabHub/msianalyzer"
 Source          = "https://github.com/NagelLabHub/msianalyzer"
 Tracker         = "https://github.com/NagelLabHub/msianalyzer/issues"
+Paper           = "https://doi.org/10.1101/2025.06.26.661510"
 
 [tool.setuptools_scm]
 version_scheme = "release-branch-semver"

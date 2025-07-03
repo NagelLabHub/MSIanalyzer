@@ -24,7 +24,7 @@ pip install git+https://github.com/NagelLabHub/MSIanalyzer.git
 ## Quick Usage Example
 A ready-to-run Google Colab notebook is available [here](https://colab.research.google.com/drive/13PjP7rVajoGOFAizytyXdfj6Souv2cts?usp=sharing) to demonstrate an example run of `MSIanalyzer` using the built-in example data.
 
-To run `MSIanalyzer` via the command line, use the following examples from the repository root:
+To run `MSIanalyzer` via the command line, use the following examples from the `example` folder:
 
 ```bash
 # Run analysis on a single marker (with sample comparison)
@@ -42,4 +42,4 @@ msianalyzer pileup fastq_example/BVSBWG_2.fastq hg38/chr4_BAT25.fa
 
 If you use this software, please cite: 
 
-Ting Zhai, Daniel J. Laverty, Zachary D. Nagel (2025). Nanopore sequencing enables accurate characterization of allelic diversity in MSI tandem repeats. 
+Ting Zhai, Daniel J. Laverty, Zachary D. Nagel (2025). MSIanalyzer: Targeted Nanopore Sequencing Enables Single Nucleotide Resolution Analysis of Microsatellite Instability Diversity. *bioRxiv* 2025.06.26.661510. https://doi.org/10.1101/2025.06.26.661510 
