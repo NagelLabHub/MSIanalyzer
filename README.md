@@ -35,7 +35,7 @@ msianalyzer run-marker BAT25 example_marker.json --run-tests
 msianalyzer run-batch example_marker.json
 
 # Generate pileup visualization for FASTQ file(s)
-msianalyzer pileup fastq_example/BVSBWG_2.fastq hg38/chr4_BAT25.fa
+msianalyzer pileup fastq_example/BVSBWG_3.fastq hg38/chr4_BAT25.fa
 ```
 
 ## Citation
