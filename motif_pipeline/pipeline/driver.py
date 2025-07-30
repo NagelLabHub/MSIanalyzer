@@ -45,6 +45,7 @@ def run_marker_pipeline(
     group_mapping: Optional[dict] = None,
     *,
     do_hierarchical_tests: bool = True,
+    do_variant_summary: bool = True,
     match_threshold: float = 0.85,
     outcome_cols: Optional[list[str]] = None,
     num_workers: int = 1,
@@ -120,13 +121,15 @@ def run_marker_pipeline(
         print("⚠️  pyarrow missing – wrote Parquet:", pq)
 
     # variant-signature plots
-    reads_df = compute_variant_signatures(reads_df)
-    plot_confident_interruptions(reads_df, group_mapping, output_dir=out_dir)
-    sig_sum, dm = summarize_variant_signatures(reads_df, "group_id", strict=False)
-    plot_variant_signature_summary(sig_sum, group_mapping, output_dir=out_dir)
-    sig_sum.to_csv(f"{out_dir}/variant_signatures_{marker}.csv")
-    dm.to_csv(f"{out_dir}/variant_signatures_dm_stats_{marker}.csv")
-
+    if do_variant_summary:
+        reads_df = compute_variant_signatures(reads_df)
+        plot_confident_interruptions(reads_df, group_mapping, output_dir=out_dir)
+        sig_sum, dm = summarize_variant_signatures(reads_df, "group_id", strict=False)
+        plot_variant_signature_summary(sig_sum, group_mapping, output_dir=out_dir)
+        sig_sum.to_csv(f"{out_dir}/variant_signatures_{marker}.csv")
+        dm.to_csv(f"{out_dir}/variant_signatures_dm_stats_{marker}.csv")
+    else:
+        print("ℹ️  Skipping variant signature summary.")
     print(f"✅ Finished {marker} → {out_dir}")
     return summ_df
 
@@ -137,6 +140,7 @@ def run_batch_pipeline(
     manifest: Path,
     *,
     skip_tests: bool = False,
+    skip_variant_summary: bool = False,
     global_threads: int = 1,
 ):
     data = json.loads(Path(manifest).read_text())
@@ -153,6 +157,7 @@ def run_batch_pipeline(
             cfg,
             gmap,
             do_hierarchical_tests=not skip_tests,
+            do_variant_summary=not skip_variant_summary,
             match_threshold=globals_.get("match_threshold", 0.85),
             num_workers=global_threads,
         )

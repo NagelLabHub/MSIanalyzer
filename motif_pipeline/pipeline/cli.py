@@ -67,6 +67,9 @@ def run_marker(
     skip_tests: bool = typer.Option(
         True, "--skip-tests/--run-tests", help="Skip hierarchical tests"
     ),
+    skip_variant_summary: bool = typer.Option(
+        False, "--skip-variant-summary", help="Skip variant-signature summary/plots"
+    ),
     threads: int = typer.Option(1, "--threads", help="CPU cores (default 1)"),
 ):
     """Process one marker."""
@@ -79,6 +82,7 @@ def run_marker(
     run_marker_pipeline(
         marker, cfg, gmap,
         do_hierarchical_tests=not skip_tests,
+        do_variant_summary=not skip_variant_summary, 
         num_workers=threads,
     )
 
@@ -89,10 +93,13 @@ def run_batch(
     skip_tests: bool = typer.Option(
         True, "--skip-tests/--run-tests", help="Skip hierarchical tests"
     ),
+    skip_variant_summary: bool = typer.Option(
+        False, "--skip-variant-summary", help="Skip variant-signature summary/plots"
+    ),
     threads: int = typer.Option(1, "--threads", help="CPU cores per marker"),
 ):
     """Run every marker in a manifest JSON (see README for schema)."""
-    run_batch_pipeline(manifest, skip_tests=skip_tests, global_threads=threads)
+    run_batch_pipeline(manifest, skip_tests=skip_tests, skip_variant_summary=skip_variant_summary,global_threads=threads)
 
 # ------------------------------------------------------------------ pile-up
 @app.command("pileup")
