@@ -9,8 +9,8 @@
             "BVSBWG_5": "Sample2"
         },
         "fastq_files": [
-        "examples/fastq_example/BVSBWG_3.fastq",
-        "examples/fastq_example/BVSBWG_5.fastq"
+        "examples/fastq_example/BVSBWG_3_500x.fastq",
+        "examples/fastq_example/BVSBWG_5_500x.fastq"
       ]
     },
     "BAT26": {
@@ -22,8 +22,47 @@
             "9BQL96_5": "Sample2"
         },
          "fastq_files": [
-        "examples/fastq_example/9BQL96_3.fastq",
-        "examples/fastq_example/9BQL96_5.fastq"
+        "examples/fastq_example/9BQL96_3_500x.fastq",
+        "examples/fastq_example/9BQL96_5_500x.fastq"
+      ]
+    },
+    "D2S123": {
+        "seq1": "AAACAGGATGCCTGCCTTTA",
+        "seq2": "GGACTTTCCACCTATGGGAC",
+        "motif": "AC",
+        "group_map": {
+            "F5SHB2_3": "Sample1",
+            "F5SHB2_5": "Sample2"
+        },
+         "fastq_files": [
+        "examples/fastq_example/F5SHB2_3_500x.fastq",
+        "examples/fastq_example/F5SHB2_5_500x.fastq"
+      ]
+    },
+    "D5S346": {
+        "seq1": "ACTCACTCTAGTGATAAATCGGG",
+        "seq2": "AGCAGATAAGACAGTATTACTAGTT",
+        "motif": "CA",
+        "group_map": {
+            "JQH95X_3": "Sample1",
+            "JQH95X_5": "Sample2"
+        },
+         "fastq_files": [
+        "examples/fastq_example/JQH95X_3_500x.fastq",
+        "examples/fastq_example/JQH95X_5_500x.fastq"
+      ]
+    },
+    "D17S250": {
+        "seq1": "GGAAGAATCAAATAGACAAT",
+        "seq2": "GCTGGCCATATATATATTTAAACC",
+        "motif": "AC",
+        "group_map": {
+            "RQ4DWT_3": "Sample1",
+            "RQ4DWT_5": "Sample2"
+        },
+         "fastq_files": [
+        "examples/fastq_example/RQ4DWT_3_500x.fastq",
+        "examples/fastq_example/RQ4DWT_5_500x.fastq"
       ]
     }
   },

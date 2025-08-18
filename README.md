@@ -27,15 +27,15 @@ A ready-to-run Google Colab notebook is available [here](https://colab.research.
 To run `MSIanalyzer` via the command line, use the following examples from the `example` folder:
 
 ```bash
-# Run analysis on a single marker (with sample comparison)
+# Run analysis on a single marker (without or with sample comparison)
 msianalyzer run-marker BAT25 example_marker.json
 msianalyzer run-marker BAT25 example_marker.json --run-tests
 
-# Run batch analysis on all markers in the JSON
+# Run batch analysis on all markers in the JSON (can use '--threads' for parrallel processing)
 msianalyzer run-batch example_marker.json
 
 # Generate pileup visualization for FASTQ file(s)
-msianalyzer pileup fastq_example/BVSBWG_3.fastq hg38/chr4_BAT25.fa
+msianalyzer pileup fastq_example/BVSBWG_3_500x.fastq hg38/chr4_BAT25.fa
 ```
 
 ## Citation
