@@ -2,11 +2,14 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+DEFAULT_MIN_SUP_REPEAT = 5   # or 5 
+DEFAULT_MIN_SUP_FLANK  = 10   # or 10 
+
 # --------------------------------------------------------------------------
 def apply_read_support_filter(
         reads_df,
-        min_sup_repeat  = 5,
-        min_sup_flank   = 10,
+        min_sup_repeat  : int = DEFAULT_MIN_SUP_REPEAT,
+        min_sup_flank   : int = DEFAULT_MIN_SUP_FLANK,
         flank_max       = None,
         pair_flank_rule = True,
         per_group       = True,
